@@ -1,26 +1,41 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './App.css'
+import Tariffs from './Components/Tariffs';
 
-function App() {
+export default function App() {
+  let nextId = 1;
+  const tariffs = [
+    {
+      id: nextId++,
+      title: 'Мой онлайн+',
+      price: 700,
+      type: 'безлимит на Tele2 России',
+      minutes: 800,
+      text: 'на остальные номера России',
+      internet: '30 ГБ интернета'
+    },
+    {
+      id: nextId++,
+      title: 'Везде онлайн',
+      price: 500,
+      type: 'безлимит на Tele2 России',
+      minutes: 500,
+      text: 'на остальные номера России',
+      internet: '40 ГБ интернета'
+    },
+    {
+      id: nextId++,
+      title: 'Мой онлайн',
+      price: 400,
+      type: 'безлимит на Tele2 России',
+      minutes: 500,
+      text: 'на другие мобилные номера домашнего региона',
+      internet: '15 ГБ интернета'
+    }
+  ];
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {tariffs.map(tariff => <Tariffs {...tariff} />)}
     </div>
-  );
+  )
 }
-
-export default App;
