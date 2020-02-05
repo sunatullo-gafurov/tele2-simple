@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function Tariffs(props) {
+export default function Tariff(props) {
     const {title, price, type, minutes, text, internet} = props;
     return (
         <div>

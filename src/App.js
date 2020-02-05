@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css'
-import Tariffs from './Components/Tariffs';
+import Tariff from './Components/Tariff';
 
 export default function App() {
   let nextId = 1;
@@ -35,7 +35,7 @@ export default function App() {
   ];
   return (
     <div className="App">
-      {tariffs.map(tariff => <Tariffs {...tariff} />)}
+      {tariffs.map(tariff => <Tariff {...tariff} />)}
     </div>
   )
 }
